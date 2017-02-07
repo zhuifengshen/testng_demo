@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="samples">
+       <test name="annotation">
+              <classes>
+                     <!--<class name="site.zhangchuzhao.samples.TestngAnnotation"/>-->
+              </classes>
+       </test>
+
+       <test name="detail1">
+              <classes>
+                     <class name="site.zhangchuzhao.samples.TestEmployeeDetails1"/>
+              </classes>
+       </test>
+
+       <test name="detail2">
+              <classes>
+                     <class name="site.zhangchuzhao.samples.TestEmployeeDetails2"/>
+              </classes>
+       </test>
+
+       <!--组中组-->
+       <!--<test name="message">-->
+              <!--<groups>-->
+                     <!--<define name="all">-->
+                            <!--<include name="function"/>-->
+                            <!--<include name="checkin"/>-->
+                     <!--</define>-->
+                     <!--<run>-->
+                            <!--<include name="all"/>-->
+                     <!--</run>-->
+              <!--</groups>-->
+              <!--<classes>-->
+                     <!--<class name="site.zhangchuzhao.samples.GroupTestExample"/>-->
+              <!--</classes>-->
+       <!--</test>-->
+
+       <!--排斥组:只运行测试类中指定的分组-->
+       <test name="group">
+              <groups>
+                     <run>
+                            <include name="function"/>
+                            <exclude name="checkin"/>
+                     </run>
+              </groups>
+              <classes>
+                     <class name="site.zhangchuzhao.samples.GroupTestExample"/>
+              </classes>
+       </test>
+
+       <!--参数化-->
+       <test name="parameter">
+              <parameter name="name" value="devinzhang"/>
+              <classes>
+                     <class name="site.zhangchuzhao.samples.ParameterizedTest"/>
+              </classes>
+       </test>
+
+       <!--DataProvider-->
+       <test name="data_provider">
+              <classes>
+                     <class name="site.zhangchuzhao.samples.DataProviderTest"/>
+              </classes>
+       </test>
+</suite>
